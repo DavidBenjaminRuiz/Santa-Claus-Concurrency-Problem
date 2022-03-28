@@ -21,7 +21,6 @@ App.geometry("1200x900")
 # Load images show them in the window
 elf_image = ImageTk.PhotoImage(Image.open('images/duende.jpeg').resize((400, 400)))
 santa_image = ImageTk.PhotoImage(Image.open('images/santa.jpg').resize((400, 400)))
-santa2_image = ImageTk.PhotoImage(Image.open('images/santa2.png').resize((400, 400)))
 reindeer_image = ImageTk.PhotoImage(Image.open('images/reno.jpeg').resize((400, 400)))
 
 elf_gui = tkinter.Label(App, image = elf_image)
