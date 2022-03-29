@@ -1,6 +1,7 @@
 from re import A
 import tkinter
 import threading
+import resources
 from PIL import ImageTk, Image
 from time import sleep
 
@@ -13,6 +14,7 @@ reindeer_sem = threading.Semaphore(MAX_REINDEERS)
 mutex = threading.Semaphore()
 santa_sem = threading.Semaphore()
 elfs_mutex = threading.Semaphore()
+lang = 'en'
 
 App = tkinter.Tk()
 App.title("Navidad de Santa")
@@ -64,11 +66,17 @@ def back_to_sleep():
     santa_gui.configure(image = santa_image)
     # reindeer_gui.configure(image = reindeer_gui)
 
+def localization(label, lang):
+    if(lang == "es"):
+        return resources.es[label]
+    else:
+        return resources.en[label]
+
 
 # Función para el proceso de santa claus. #
 def santa_process():
     global reindeers, MAX_REINDEERS, elfs, MAX_ELFS
-    print("El santa se anda échando una jeta...")
+    print(localization("lblSleep", lang))
     while True:
         santa_sem.acquire()
         mutex.acquire()
