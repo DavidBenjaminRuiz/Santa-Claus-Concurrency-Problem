@@ -1,3 +1,4 @@
+#Librerias 
 from re import A
 import tkinter
 import threading
@@ -16,9 +17,11 @@ santa_sem = threading.Semaphore()
 elfs_mutex = threading.Semaphore()
 lang = 'en'
 
+
 App = tkinter.Tk()
 App.title("Navidad de Santa")
 App.geometry("1200x450")
+
 
 # Load images show them in the window
 elf_image = ImageTk.PhotoImage(Image.open('images/duende.jpeg').resize((400, 400)))
@@ -99,7 +102,7 @@ def santa_process():
         mutex.release()
         back_to_sleep()
 
-# Función para el proceso de los duendes. #
+# Función para el proceso de los duendes. 
 def elf_process():
     global elfs, MAX_ELFS
     while True:
