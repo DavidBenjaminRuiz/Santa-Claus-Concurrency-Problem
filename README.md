@@ -8,5 +8,5 @@ A simple graphic representation of the santa claus problem using semaphores and 
 
 Just run the follow command and enjoy: 
 ```
-python3 gui.py
+python3 santa.py
 ```

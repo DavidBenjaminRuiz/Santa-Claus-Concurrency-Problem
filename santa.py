@@ -57,10 +57,6 @@ def prepare_sled():
     sleep(1)
 
 
-# Función para definir que los regalos se repartieron.
-def gifts():
-    pass
-
 # Función para domir a santa.
 def back_to_sleep():
     santa_gui.configure(image = santa_image)
