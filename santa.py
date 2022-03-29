@@ -18,7 +18,7 @@ lang = 'en'
 
 App = tkinter.Tk()
 App.title("Navidad de Santa")
-App.geometry("1200x900")
+App.geometry("1200x450")
 
 # Load images show them in the window
 elf_image = ImageTk.PhotoImage(Image.open('images/duende.jpeg').resize((400, 400)))
@@ -40,20 +40,20 @@ reindeer_cont = tkinter.StringVar()
 elf_help_cont = tkinter.StringVar()
 reindeer_sled_cont = tkinter.StringVar()
 
-elf_lb = tkinter.Label(App, textvariable = elfs_cont).grid(row = 1, column = 0)
-reindeer_label = tkinter.Label(App, textvariable = reindeer_cont).grid(row = 1, column = 2)
+elf_lb = tkinter.Label(App, textvariable = elfs_cont, font= "Arial").grid(row = 1, column = 0)
+reindeer_label = tkinter.Label(App, textvariable = reindeer_cont, font= "Arial").grid(row = 1, column = 2)
 
 # -------------------- Funciones para modificar la interfaz grafica. -------------------- #
 
 # Función de solicitud de ayuda de los duendes.
 def elfs_get_help():
-    elf_help_label = tkinter.Label(App, textvariable= elf_help_cont).grid(row= 3, column=1)
+    elf_help_label = tkinter.Label(App, textvariable= elf_help_cont, font= "Arial").grid(row= 3, column=1)
     sleep(1)
 
 
 # Función para atender a los procesos renos.
 def prepare_sled():
-    reindeer_sled_label = tkinter.Label(App, textvariable= reindeer_sled_cont).grid(row= 3, column=1)
+    reindeer_sled_label = tkinter.Label(App, textvariable= reindeer_sled_cont, font= "Arial").grid(row= 3, column=1)
     sleep(1)
 
 
